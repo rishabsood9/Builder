@@ -1,0 +1,40 @@
+
+
+.popup {
+    background-color: #292929; /* Dark background matching the form */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Slightly stronger shadow for focus */
+    width: 100%;
+  
+    color: #00ff00; /* Green text to match theme */
+    font-size: 18px; /* Clean and readable font size */
+    margin: auto;
+  }
+  
+  .popup h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff00; /* Bright green for header */
+  }
+  
+  
+  
+  /* Optional: Add fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .popup {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  

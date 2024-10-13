@@ -1,0 +1,34 @@
+<section class="testimonials-section">
+    <h1 class="testimonials-heading">What Our Clients Say</h1>
+    <div class="marquee">
+      <div class="marquee-content">
+        <div class="marquee-inner">
+          <app-testimonial-card
+            *ngFor="let testimonial of testimonials"
+            [name]="testimonial.name"
+            [image]="testimonial.image"
+            [comments]="testimonial.comments"
+            [rating]="testimonial.rating"
+          ></app-testimonial-card>
+        </div>
+        <div class="marquee-inner">
+          <app-testimonial-card
+            *ngFor="let testimonial of testimonials"
+            [name]="testimonial.name"
+            [image]="testimonial.image"
+            [comments]="testimonial.comments"
+            [rating]="testimonial.rating"
+          ></app-testimonial-card>
+        </div>
+      </div>
+    </div>
+    
+    <a class="btn btn-add" routerLink="/testimonial">Review from our top clients</a>
+  
+    <app-testimonial-modal
+      *ngIf="isModalOpen"
+      (close)="isModalOpen = false"
+      (submit)="addTestimonial($event)"
+    ></app-testimonial-modal>
+  </section>
+  

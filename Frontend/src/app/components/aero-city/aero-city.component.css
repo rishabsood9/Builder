@@ -1,0 +1,25 @@
+.project-details-table {
+  margin-bottom: 20px;
+}
+
+.project-details-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-details-table td {
+  padding: 10px;
+  border: 1px solid #00bfff;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}

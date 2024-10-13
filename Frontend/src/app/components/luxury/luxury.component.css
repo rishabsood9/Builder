@@ -1,0 +1,36 @@
+.testimonials-section {
+  background-color: #000000;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 50s linear infinite; /* Adjust duration as necessary */
+  animation-play-state: running; /* Default running state */
+}
+
+.marquee-inner {
+  display: flex;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Stop animation on hover */
+.marquee-content:hover {
+  animation-play-state: paused;
+}

@@ -1,0 +1,84 @@
+<div class="nearby-places">
+  <!-- Healthcare Facilities Section -->
+  <div class="section">
+    <div
+      class="section-header"
+      (click)="toggleSection('Healthcare Facilities')"
+    >
+      <fa-icon [icon]="faHospital" class="section-icon"></fa-icon>
+      Healthcare Facilities
+      <fa-icon
+        [icon]="
+          isSectionOpen('Healthcare Facilities') ? faChevronUp : faChevronDown
+        "
+        class="toggle-icon"
+      ></fa-icon>
+    </div>
+    <div
+      class="section-content"
+      [ngClass]="{ collapsed: !isSectionOpen('Healthcare Facilities') }"
+    >
+      <ul>
+        <li *ngFor="let place of nearbyPlaces['Healthcare Facilities']">
+          {{ place }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Educational Institutions Section -->
+  <div class="section">
+    <div
+      class="section-header"
+      (click)="toggleSection('Educational Institutions')"
+    >
+      <fa-icon [icon]="faGraduationCap" class="section-icon"></fa-icon>
+      Educational Institutions
+      <fa-icon
+        [icon]="
+          isSectionOpen('Educational Institutions')
+            ? faChevronUp
+            : faChevronDown
+        "
+        class="toggle-icon"
+      ></fa-icon>
+    </div>
+    <div
+      class="section-content"
+      [ngClass]="{ collapsed: !isSectionOpen('Educational Institutions') }"
+    >
+      <ul>
+        <li *ngFor="let place of nearbyPlaces['Educational Institutions']">
+          {{ place }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Malls/Shopping Centers Section -->
+  <div class="section">
+    <div
+      class="section-header"
+      (click)="toggleSection('Malls/Shopping Centers')"
+    >
+      <fa-icon [icon]="faShoppingCart" class="section-icon"></fa-icon>
+      Malls/Shopping Centers
+      <fa-icon
+        [icon]="
+          isSectionOpen('Malls/Shopping Centers') ? faChevronUp : faChevronDown
+        "
+        class="toggle-icon"
+      ></fa-icon>
+    </div>
+    <div
+      class="section-content"
+      [ngClass]="{ collapsed: !isSectionOpen('Malls/Shopping Centers') }"
+    >
+      <ul>
+        <li *ngFor="let place of nearbyPlaces['Malls/Shopping Centers']">
+          {{ place }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+/* General Layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content should take the remaining space */
+main {
+    flex-grow: 1;
+}
+
+/* Footer Styles */
+.footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    margin: 0 15px;
+    font-size: 40px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #00ff00;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #d3d3d3;
+}

@@ -1,0 +1,54 @@
+.testimonials-section {
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .testimonials-heading {
+    font-size: 2rem;
+    color: #00ff00;
+    margin-bottom: 20px;
+  }
+  
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite; /* Adjust duration as necessary */
+  }
+  
+  .marquee-inner {
+    display: flex;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .btn-add {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-add:hover {
+    background-color: #009900;
+  }
+  

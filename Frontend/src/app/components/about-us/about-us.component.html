@@ -1,0 +1,107 @@
+<section class="about-us" style="background-color: #1f1f1f; color: #d3d3d3">
+  <div class="container">
+    <h1>About Us</h1>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          We are a RERA-approved real estate firm offering transparent,
+          reliable, and customer-centric services. With years of experience in
+          the real estate market, we aim to redefine the standards of buying,
+          selling, and leasing properties by providing you with the best deals
+          and uncompromised transparency.
+        </p>
+        <p>
+          Our services cater to residential, commercial, and industrial
+          properties, ensuring that each client finds their dream space with
+          confidence and ease. Customer satisfaction is our top priority, and we
+          believe in establishing long-lasting relationships based on trust and
+          integrity.
+        </p>
+        <p>
+          Our experienced team of professionals is here to guide you through
+          every step of the process, whether you're a first-time homebuyer or a
+          seasoned investor.
+        </p>
+        <a
+          href="https://rera.website.com/verify"
+          class="verify-link"
+          target="_blank"
+          >Verify us here</a
+        >
+        <div class="why-choose-us">
+          <h2>Why Choose Us?</h2>
+          <ul>
+            <li>
+              <i class="fas fa-check"></i> RERA Registered for Legal
+              Transparency
+            </li>
+            <li>
+              <i class="fas fa-check"></i> 100% Client Satisfaction Guarantee
+            </li>
+            <li><i class="fas fa-check"></i> Expert Property Consultants</li>
+            <li>
+              <i class="fas fa-check"></i> Hassle-Free Buying and Selling
+              Process
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="about-image">
+        <img
+          src="assets/rera-certificate.jpg"
+          alt="RERA Certificate"
+          class="clickable-image"
+          (click)="openModal(RERETemplate)"
+        />
+      </div>
+    </div>
+    <div class="testimonials">
+      <h2>Client Testimonials</h2>
+      <p>
+        "The entire experience with this real estate firm was beyond our
+        expectations. They helped us find our dream home, keeping every promise
+        they made along the way!" - <strong>John D.</strong>
+      </p>
+      <p>
+        "A fantastic company that takes the stress out of property deals. I
+        always felt informed and cared for throughout the process." -
+        <strong>Emily R.</strong>
+      </p>
+    </div>
+  </div>
+
+  <ng-template #RERETemplate>
+    <div>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">RERA Certificate</h4>
+        <button
+          type="button"
+          class="close pull-right"
+          aria-label="Close"
+          (click)="modalRef?.hide()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div  class="modal-body">
+        <img
+          src="assets/rera-certificate.jpg"
+          alt="RERA Certificate"
+          class="modal-img"
+        />
+        <!-- <a
+          href="assets/rera-certificate.jpg"
+          class="btn btn-success mt-3"
+          download
+          >Download Certificate</a
+        > -->
+        <a class="btn btn-success mt-3" (click)="enquire()"
+          >Download Certificate</a
+        >
+      </div>
+    </div>
+  </ng-template>
+</section>
+<ng-template #enquireRef>
+  <app-enquire-now (event)="close($event)"></app-enquire-now
+></ng-template>

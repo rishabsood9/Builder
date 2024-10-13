@@ -1,0 +1,18 @@
+<section class="testimonials-section">
+  <div class="marquee">
+    <div class="marquee-content">
+      <div class="marquee-inner">
+        <app-luxury-card
+          *ngFor="let luxury of luxuries"
+          [luxury]="luxury"
+        ></app-luxury-card>
+      </div>
+      <div class="marquee-inner">
+        <app-luxury-card
+          *ngFor="let luxury of luxuries"
+          [luxury]="luxury"
+        ></app-luxury-card>
+      </div>
+    </div>
+  </div>
+</section>

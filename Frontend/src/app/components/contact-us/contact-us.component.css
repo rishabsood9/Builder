@@ -1,0 +1,105 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: #d3d3d3;
+}
+
+h1,
+h2 {
+  color: #00ff00;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-us {
+  padding: 50px 0;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #00ff00;
+}
+
+.copy-btn {
+  background-color: #00ff00;
+  border: none;
+  padding: 5px 10px;
+  color: #121212;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.copy-btn:hover {
+  background-color: #008f00;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #00ff00;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 5px;
+}
+
+.form-control::placeholder {
+  color: #d3d3d3;
+}
+
+.btn-success {
+  background-color: #00ff00;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-success:hover {
+  background-color: #008f00;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+}

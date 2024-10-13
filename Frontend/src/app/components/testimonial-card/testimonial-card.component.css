@@ -1,0 +1,21 @@
+.testimonial-card {
+    background-color: #121212;
+    color: #d3d3d3;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 10px; /* Adjusted to reduce spacing */
+    display: flex;
+    align-items: flex-start;
+    min-width: 300px; /* Ensure the card has a minimum width */
+    transition: transform 0.2s ease;
+  }
+  
+  .client-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #00ff00;
+    margin-right: 10px;
+  }
+  

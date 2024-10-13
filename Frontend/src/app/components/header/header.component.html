@@ -1,0 +1,15 @@
+<header class="dark-header">
+  <div class="logo-container">
+    <img class="logo" src="../../assets/logo.jpeg" alt="Logo" class="logo" routerLink="/" />
+  </div>
+  <nav class="nav-links">
+    <!-- <button>Enquire Now</button> -->
+    <app-btn (click)="enquire()" [btnName]="'Enquire Now'"></app-btn>
+    <a routerLink="/" class="nav-item">Home</a>
+    <a routerLink="about-us" class="nav-item">About Us</a>
+    <a routerLink="contact-us" class="nav-item">Contact Us</a>
+  </nav>
+</header>
+<ng-template #enquireRef>
+  <app-enquire-now (event)="close($event)"></app-enquire-now
+></ng-template>

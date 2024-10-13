@@ -1,0 +1,81 @@
+<div class="c">
+  <div class="aerocity-container">
+    <!-- Other sections go here -->
+    <div class="intro-section">
+      <h1>Splendor Aerocity</h1>
+    </div>
+    <!-- src="https://www.youtube.com/embed/nJm7TRGBtOw?si=Iy5c-VWZfa3zYFj_&autoplay=1&mute=1&loop=1&playlist=nJm7TRGBtOw&controls=0&modestbranding=1&rel=0&iv_load_policy=3" -->
+    <!-- Sticky Get In Touch Button and Contact Details -->
+    <div class="row">
+      <div class="col-md-8 col-12">
+        <div class="carousel">
+          <iframe
+            class="carousel-video"
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/Jm7TRGBtOw?si=Iy5c-VWZfa3zYFj_&autoplay=1&mute=1&loop=1&playlist=nJm7TRGBtOw&controls=0&modestbranding=1&rel=0&iv_load_policy=3"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 contact-details">
+        <div>
+          <p>
+            Strategically located on the Airport Road, AeroCity is just a few
+            kilometers from the main connecting highway, offering immense
+            potential for future appreciation.
+          </p>
+        </div>
+        <div class="row">
+          <div class="colony-info col-12">
+            <ul>
+              <li>
+                <strong>Address:</strong> Ajnala Rd, Heir, Amritsar, Punjab
+                143001
+              </li>
+              <li><strong>RERA No.:</strong> PBRERA-ASR02-PM0125</li>
+              <li><strong>Land Area:</strong> 151 Acres</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Luxuries Experience Section -->
+    <div class="luxuries-section">
+      <h3 style="color: #00bfff; text-align: center">
+        Experience Unparalleled Luxuries
+      </h3>
+      <app-luxury [luxuries]="luxuries"></app-luxury>
+    </div>
+
+    <!-- Full-width Carousel Section -->
+   
+
+    <!-- Project Details and Nearby Places Sections -->
+    <div class="row" style="padding-top: 20px">
+      <div class="col-md-6 col-12">
+        <div class="project-details-section">
+          <h3 style="color: #00bfff; text-align: center">Project Details</h3>
+          <table>
+            <tr *ngFor="let key of projectDetails | keyvalue">
+              <td>
+                <strong>{{ key.key }}</strong>
+              </td>
+              <td>{{ key.value }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-6 col-12">
+        <app-nearby-places [nearbyPlaces]="nearbyPlaces"></app-nearby-places>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="full-row-carousel">
+  <app-carousel [images]="imageUrls"></app-carousel>
+</div>

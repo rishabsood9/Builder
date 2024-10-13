@@ -1,0 +1,97 @@
+<div
+  style="
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  "
+>
+  <div class="modal-header" style="justify-content: center">
+    <h4 style="color: #00ff00">Add Enquiry</h4>
+  </div>
+  <div class="modal-body enquiry-form">
+    <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit(responseMessage)">
+      <div class="form-group">
+        <label for="fullName">Full Name <span class="astrik">*</span></label>
+        <input
+          id="fullName"
+          type="text"
+          class="form-control"
+          formControlName="fullName"
+          placeholder="Enter your full name"
+        />
+        <div
+          *ngIf="
+            enquiryForm.get('fullName')?.invalid &&
+            enquiryForm.get('fullName')?.touched
+          "
+          class="error-message"
+        >
+          Full Name is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span class="astrik">*</span></label>
+        <input
+          id="email"
+          type="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Enter your email"
+        />
+        <div
+          *ngIf="
+            enquiryForm.get('email')?.invalid &&
+            enquiryForm.get('email')?.touched
+          "
+          class="error-message"
+        >
+          <span *ngIf="enquiryForm.get('email')?.errors?.['required']"
+            >Email is required.</span
+          >
+          <span *ngIf="enquiryForm.get('email')?.errors?.['email']"
+            >Invalid email format.</span
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone <span class="astrik">*</span></label>
+        <input
+          id="phone"
+          type="text"
+          class="form-control"
+          formControlName="phone"
+          placeholder="Enter your phone number"
+        />
+        <div
+          *ngIf="
+            enquiryForm.get('phone')?.invalid &&
+            enquiryForm.get('phone')?.touched
+          "
+          class="error-message"
+        >
+          <span *ngIf="enquiryForm.get('phone')?.errors?.['required']"
+            >Phone number is required.</span
+          >
+          <span *ngIf="enquiryForm.get('phone')?.errors?.['pattern']"
+            >Phone number must be exactly 10 digits.</span
+          >
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-submit">Submit</button>
+        <button type="button" class="btn-cancel" (click)="event.emit(false)">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<ng-template #responseMessage
+  ><app-message
+    [message]="'Successfully Saved. We will reach you out in a while*'"
+  ></app-message
+></ng-template>
